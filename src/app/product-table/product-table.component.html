@@ -1,0 +1,36 @@
+<table>
+  <thead>
+    <tr>
+      <th>PLU</th>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Price</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ plu }}</td>
+      <td>{{ productName }}</td>
+      <td>{{ amount }}</td>
+      <td>{{ price }}</td>
+      <td>{{ total }}</td>
+    </tr>
+    <tr *ngFor="let topping of toppings">
+      <td>{{ topping.plu }}</td>
+      <td>{{ topping.name }}</td>
+      <td>{{ topping.amount }}</td>
+      <td>{{ topping.price }}</td>
+      <td>{{ topping.total }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <div *ngIf="toppings && toppings.length > 0">
+    <p>
+      Total Price
+      {{ calculateTotalPrice() }}
+    </p>
+  </div>
+</div>
