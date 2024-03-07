@@ -1,0 +1,48 @@
+.button-container {
+  display: flex;
+  align-items: center;
+}
+.minus-button,
+.plus-button {
+  background-color: white;
+  font-size: 25px;
+  border: none;
+  margin: 0 5px 0 5px;
+  cursor: pointer;
+  border-radius: 5%;
+  flex: 1;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  padding: 10px;
+  border-radius: 5%;
+  gap: 5px;
+}
+
+.minus-button {
+  color: red;
+}
+
+.plus-button {
+  color: green;
+}
+
+.content {
+  font-size: 20px;
+  font-weight: bold;
+}
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 8rem;
+  background-color: rgba(166, 157, 174, 0.626);
+  border-radius: 5%;
+  gap: 1px;
+}
