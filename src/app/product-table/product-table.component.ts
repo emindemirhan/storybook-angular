@@ -12,6 +12,11 @@ export class ProductTableComponent {
   @Input() price: number = 10;
   @Input() total: number = 10;
   @Input() toppings: any[] = [];
+  @Input() cancelButtonProperties: any = {
+    text: 'Cancel',
+    color: 'red',
+    fontSize: '16px',
+  };
 
   calculateTotalPrice(): number {
     let totalPrice = this.total;

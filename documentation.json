@@ -370,7 +370,7 @@
         },
         {
             "name": "ProductTableComponent",
-            "id": "component-ProductTableComponent-641b44d096035177cebbad5844468843b2dc9c594582f0fdc2982d45e947b033536d2ba8925a0de8fc43d20a09aa1dd8e2eff487e235b2e712428ce954f1732e",
+            "id": "component-ProductTableComponent-09df6e3357bbf274b9deffad19d74bbb4b9cb3b14b2f0c812a0a4b4b91d90f5ea4c13e26e6cbd75945fa56c39d031134015ae0f92730609ef4abaacba36b6d1b",
             "file": "src/app/product-table/product-table.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -395,6 +395,15 @@
                     "deprecationMessage": "",
                     "line": 11,
                     "type": "number",
+                    "decorators": []
+                },
+                {
+                    "name": "cancelButtonProperties",
+                    "defaultValue": "{\r\n    text: 'Cancel',\r\n    color: 'red',\r\n    fontSize: '16px',\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "any",
                     "decorators": []
                 },
                 {
@@ -452,7 +461,7 @@
                     "optional": false,
                     "returnType": "number",
                     "typeParameters": [],
-                    "line": 16,
+                    "line": 21,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -466,17 +475,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-product-table',\r\n  templateUrl: './product-table.component.html',\r\n  styleUrls: ['./product-table.component.scss'],\r\n})\r\nexport class ProductTableComponent {\r\n  @Input() plu: number = 100;\r\n  @Input() productName: string = 'Lahmacun';\r\n  @Input() amount: number = 1;\r\n  @Input() price: number = 10;\r\n  @Input() total: number = 10;\r\n  @Input() toppings: any[] = [];\r\n\r\n  calculateTotalPrice(): number {\r\n    let totalPrice = this.total;\r\n    for (const topping of this.toppings) {\r\n      totalPrice += topping.total;\r\n    }\r\n    return totalPrice;\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-product-table',\r\n  templateUrl: './product-table.component.html',\r\n  styleUrls: ['./product-table.component.scss'],\r\n})\r\nexport class ProductTableComponent {\r\n  @Input() plu: number = 100;\r\n  @Input() productName: string = 'Lahmacun';\r\n  @Input() amount: number = 1;\r\n  @Input() price: number = 10;\r\n  @Input() total: number = 10;\r\n  @Input() toppings: any[] = [];\r\n  @Input() cancelButtonProperties: any = {\r\n    text: 'Cancel',\r\n    color: 'red',\r\n    fontSize: '16px',\r\n  };\r\n\r\n  calculateTotalPrice(): number {\r\n    let totalPrice = this.total;\r\n    for (const topping of this.toppings) {\r\n      totalPrice += topping.total;\r\n    }\r\n    return totalPrice;\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "table {\r\n  width: 30rem;\r\n  border-collapse: collapse;\r\n}\r\n\r\nth {\r\n  background-color: black;\r\n  color: white;\r\n  padding: 10px;\r\n  text-align: left;\r\n}\r\n\r\ntbody tr:nth-child(odd) {\r\n  background-color: #f2f2f2;\r\n}\r\n\r\ntbody tr:nth-child(even) {\r\n  background-color: white;\r\n}\r\n\r\ntd {\r\n  padding: 8px;\r\n  border: 1px solid #ddd;\r\n}\r\n",
+                    "data": "table {\r\n  width: 30rem;\r\n  border-collapse: collapse;\r\n}\r\n\r\n.main-div {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 30rem;\r\n  background-color: rgba(166, 157, 174, 0.626);\r\n  border-radius: 5%;\r\n  gap: 1px;\r\n}\r\n\r\nth {\r\n  background-color: black;\r\n  color: white;\r\n  padding: 10px;\r\n  text-align: left;\r\n}\r\n\r\ntbody tr:nth-child(odd) {\r\n  background-color: #f2f2f2;\r\n}\r\n\r\ntbody tr:nth-child(even) {\r\n  background-color: white;\r\n}\r\n\r\ntd {\r\n  padding: 8px;\r\n  border: 1px solid #ddd;\r\n}\r\n\r\n.total-price {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: rgba(0, 0, 0, 0.663);\r\n  color: green;\r\n  width: 25rem;\r\n  padding: 1rem;\r\n  border-radius: 3%;\r\n  font-size: 25px;\r\n  font-weight: bold;\r\n}\r\n\r\n.footer-div {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.cancel-button {\r\n  background-color: white;\r\n  color: red;\r\n  padding: 10px;\r\n  border: solid 2px red;\r\n  cursor: pointer;\r\n  border-radius: 5%;\r\n\r\n  width: 7rem;\r\n  margin: 10px;\r\n}\r\n",
                     "styleUrl": "./product-table.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<table>\r\n  <thead>\r\n    <tr>\r\n      <th>PLU</th>\r\n      <th>Name</th>\r\n      <th>Amount</th>\r\n      <th>Price</th>\r\n      <th>Total</th>\r\n    </tr>\r\n  </thead>\r\n  <tbody>\r\n    <tr>\r\n      <td>{{ plu }}</td>\r\n      <td>{{ productName }}</td>\r\n      <td>{{ amount }}</td>\r\n      <td>{{ price }}</td>\r\n      <td>{{ total }}</td>\r\n    </tr>\r\n    <tr *ngFor=\"let topping of toppings\">\r\n      <td>{{ topping.plu }}</td>\r\n      <td>{{ topping.name }}</td>\r\n      <td>{{ topping.amount }}</td>\r\n      <td>{{ topping.price }}</td>\r\n      <td>{{ topping.total }}</td>\r\n    </tr>\r\n  </tbody>\r\n</table>\r\n\r\n<div>\r\n  <div *ngIf=\"toppings && toppings.length > 0\">\r\n    <p>\r\n      Total Price\r\n      {{ calculateTotalPrice() }}\r\n    </p>\r\n  </div>\r\n</div>\r\n"
+            "templateData": "<div class=\"main-div\">\r\n  <table>\r\n    <thead>\r\n      <tr>\r\n        <th>PLU</th>\r\n        <th>Name</th>\r\n        <th>Amount</th>\r\n        <th>Price</th>\r\n        <th>Total</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <tr>\r\n        <td>{{ plu }}</td>\r\n        <td>{{ productName }}</td>\r\n        <td>{{ amount }}</td>\r\n        <td>{{ price }}</td>\r\n        <td>{{ total }}</td>\r\n      </tr>\r\n      <tr *ngFor=\"let topping of toppings\">\r\n        <td>{{ topping.plu }}</td>\r\n        <td>{{ topping.name }}</td>\r\n        <td>{{ topping.amount }}</td>\r\n        <td>{{ topping.price }}</td>\r\n        <td>{{ topping.total }}</td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n\r\n  <div>\r\n    <div class=\"footer-div\" *ngIf=\"toppings && toppings.length > 0\">\r\n      <p class=\"total-price\">{{ calculateTotalPrice() }} £</p>\r\n      <button\r\n        class=\"cancel-button\"\r\n        [style.color]=\"cancelButtonProperties.color\"\r\n        [style.fontSize]=\"cancelButtonProperties.fontSize\"\r\n      >\r\n        {{ cancelButtonProperties.text }}\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
         }
     ],
     "modules": [
@@ -995,7 +1004,7 @@
                 "linktype": "component",
                 "name": "ProductTableComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/9",
                 "status": "low"
             },
             {

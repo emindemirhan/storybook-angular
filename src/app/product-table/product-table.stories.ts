@@ -34,4 +34,9 @@ Default.args = {
     { name: 'Döner', amount: 1, price: 5, total: 5, plu: 100 },
     { name: 'Çeşni', amount: 1, price: 2, total: 2, plu: 100 },
   ],
+  cancelButtonProperties: {
+    text: 'Cancel',
+    color: 'Red',
+    fontSize: '20px',
+  },
 };

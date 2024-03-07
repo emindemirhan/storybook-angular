@@ -3,6 +3,17 @@ table {
   border-collapse: collapse;
 }
 
+.main-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30rem;
+  background-color: rgba(166, 157, 174, 0.626);
+  border-radius: 5%;
+  gap: 1px;
+}
+
 th {
   background-color: black;
   color: white;
@@ -21,4 +32,36 @@ tbody tr:nth-child(even) {
 td {
   padding: 8px;
   border: 1px solid #ddd;
+}
+
+.total-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.663);
+  color: green;
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 3%;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.footer-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel-button {
+  background-color: white;
+  color: red;
+  padding: 10px;
+  border: solid 2px red;
+  cursor: pointer;
+  border-radius: 5%;
+
+  width: 7rem;
+  margin: 10px;
 }

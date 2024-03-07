@@ -1,36 +1,42 @@
-<table>
-  <thead>
-    <tr>
-      <th>PLU</th>
-      <th>Name</th>
-      <th>Amount</th>
-      <th>Price</th>
-      <th>Total</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{ plu }}</td>
-      <td>{{ productName }}</td>
-      <td>{{ amount }}</td>
-      <td>{{ price }}</td>
-      <td>{{ total }}</td>
-    </tr>
-    <tr *ngFor="let topping of toppings">
-      <td>{{ topping.plu }}</td>
-      <td>{{ topping.name }}</td>
-      <td>{{ topping.amount }}</td>
-      <td>{{ topping.price }}</td>
-      <td>{{ topping.total }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="main-div">
+  <table>
+    <thead>
+      <tr>
+        <th>PLU</th>
+        <th>Name</th>
+        <th>Amount</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ plu }}</td>
+        <td>{{ productName }}</td>
+        <td>{{ amount }}</td>
+        <td>{{ price }}</td>
+        <td>{{ total }}</td>
+      </tr>
+      <tr *ngFor="let topping of toppings">
+        <td>{{ topping.plu }}</td>
+        <td>{{ topping.name }}</td>
+        <td>{{ topping.amount }}</td>
+        <td>{{ topping.price }}</td>
+        <td>{{ topping.total }}</td>
+      </tr>
+    </tbody>
+  </table>
 
-<div>
-  <div *ngIf="toppings && toppings.length > 0">
-    <p>
-      Total Price
-      {{ calculateTotalPrice() }}
-    </p>
+  <div>
+    <div class="footer-div" *ngIf="toppings && toppings.length > 0">
+      <p class="total-price">{{ calculateTotalPrice() }} £</p>
+      <button
+        class="cancel-button"
+        [style.color]="cancelButtonProperties.color"
+        [style.fontSize]="cancelButtonProperties.fontSize"
+      >
+        {{ cancelButtonProperties.text }}
+      </button>
+    </div>
   </div>
 </div>
