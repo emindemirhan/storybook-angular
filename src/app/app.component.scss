@@ -7,6 +7,15 @@
   background-color: white;
 }
 
+.bottom-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 1rem;
+}
+
 .button-layout {
   display: flex;
   flex-direction: row;
@@ -22,8 +31,26 @@
 .category-button-layout {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 95vh;
+}
+
+.menu-toggler-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.category-button-div {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: top;
+  padding: 1rem;
   padding: 1rem;
   gap: 1rem;
 }
@@ -39,12 +66,35 @@
 @media (max-width: 768px) {
   .main-layout {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
   }
   .button-layout {
     justify-content: center;
     width: fit-content;
   }
   .category-button-layout {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .menu-toggler-buttons {
+    align-self: flex-center;
+  }
+
+  .category-button-div {
     align-self: center;
+  }
+
+  .middle-div {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom-buttons {
+    justify-content: center;
+    align-items: flex-end;
   }
 }

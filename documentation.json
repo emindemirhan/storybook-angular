@@ -89,17 +89,17 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".main-layout {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: center;\r\n  align-items: start;\r\n  width: 100%;\r\n  background-color: white;\r\n}\r\n\r\n.button-layout {\r\n  display: flex;\r\n  flex-direction: row;\r\n  flex-wrap: wrap;\r\n  justify-content: start;\r\n  align-items: top;\r\n  width: 35rem;\r\n  padding: 1rem;\r\n\r\n  gap: 1rem;\r\n}\r\n\r\n.category-button-layout {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: start;\r\n  align-items: top;\r\n  padding: 1rem;\r\n  gap: 1rem;\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .main-layout {\r\n    flex-direction: column;\r\n  }\r\n  .button-layout {\r\n    justify-content: center;\r\n    width: fit-content;\r\n  }\r\n  .category-button-layout {\r\n    align-self: center;\r\n  }\r\n}\r\n",
+                    "data": ".main-layout {\r\n  display: flex;\r\n  flex-direction: row;\r\n  justify-content: center;\r\n  align-items: flex-start;\r\n  width: 100%;\r\n  background-color: white;\r\n}\r\n\r\n.button-layout {\r\n  display: flex;\r\n  flex-direction: row;\r\n  flex-wrap: wrap;\r\n  justify-content: flex-start;\r\n  align-items: top;\r\n  width: 35rem;\r\n  padding: 1rem;\r\n\r\n  gap: 1rem;\r\n}\r\n\r\n.category-button-layout {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: flex-start;\r\n  align-items: top;\r\n  padding: 1rem;\r\n  gap: 1rem;\r\n}\r\n\r\n.middle-div {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n  align-items: flex-end;\r\n  height: 95vh;\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .main-layout {\r\n    flex-direction: column;\r\n  }\r\n  .button-layout {\r\n    justify-content: center;\r\n    width: fit-content;\r\n  }\r\n  .category-button-layout {\r\n    align-self: center;\r\n  }\r\n}\r\n",
                     "styleUrl": "./app.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"main-layout\">\n  <div><app-product-table [toppings]=\"this.toppings\"></app-product-table></div>\n  <div>\n    <div class=\"button-layout\">\n      <app-button></app-button><app-button></app-button><app-button></app-button\n      ><app-button></app-button><app-button></app-button\n      ><app-button></app-button>\n    </div>\n    <div>\n      <app-apply-button\n        [buttonColor]=\"'#277ED4'\"\n        [buttonFontSize]=\"'14px'\"\n        [buttonText]=\"'Apply'\"\n      ></app-apply-button>\n    </div>\n  </div>\n  <div class=\"category-button-layout\">\n    <app-category-button\n      [buttonText]=\"'Product Category'\"\n      [buttonBackground]=\"'#2D333F'\"\n      [buttonFontSize]=\"'14px'\"\n    ></app-category-button>\n    <app-category-button\n      [buttonText]=\"'Daily'\"\n      [buttonBackground]=\"'#E7ECF2'\"\n      [buttonFontSize]=\"'14px'\"\n      [buttonTextColor]=\"'#2D333F'\"\n    ></app-category-button>\n    <app-category-button\n      [buttonText]=\"'Alacarte'\"\n      [buttonBackground]=\"'#E7ECF2'\"\n      [buttonFontSize]=\"'12px'\"\n      [buttonTextColor]=\"'#2D333F'\"\n    ></app-category-button>\n    <app-category-button\n      [buttonText]=\"'Dessert'\"\n      [buttonBackground]=\"'#E7ECF2'\"\n      [buttonFontSize]=\"'12px'\"\n      [buttonTextColor]=\"'#2D333F'\"\n    ></app-category-button>\n    <app-category-button\n      [buttonText]=\"'Drink'\"\n      [buttonBackground]=\"'#E7ECF2'\"\n      [buttonFontSize]=\"'12px'\"\n      [buttonTextColor]=\"'#2D333F'\"\n    ></app-category-button>\n  </div>\n</div>\n"
+            "templateData": "<div class=\"main-layout\">\n  <div><app-product-table [toppings]=\"this.toppings\"></app-product-table></div>\n  <div class=\"middle-div\">\n    <div class=\"button-layout\">\n      <app-button></app-button><app-button></app-button><app-button></app-button\n      ><app-button></app-button><app-button></app-button\n      ><app-button></app-button>\n    </div>\n    <div>\n      <app-apply-button\n        [buttonTextColor]=\"'white'\"\n        [buttonFontSize]=\"'14px'\"\n        [buttonText]=\"'Apply'\"\n      ></app-apply-button>\n    </div>\n  </div>\n  <div class=\"category-button-layout\">\n    <app-category-button\n      [buttonText]=\"'Product Category'\"\n      [buttonBackground]=\"'#2D333F'\"\n      [buttonFontSize]=\"'14px'\"\n    ></app-category-button>\n    <app-category-button\n      [buttonText]=\"'Daily'\"\n      [buttonBackground]=\"'#E7ECF2'\"\n      [buttonFontSize]=\"'14px'\"\n      [buttonTextColor]=\"'#2D333F'\"\n    ></app-category-button>\n    <app-category-button\n      [buttonText]=\"'Alacarte'\"\n      [buttonBackground]=\"'#E7ECF2'\"\n      [buttonFontSize]=\"'12px'\"\n      [buttonTextColor]=\"'#2D333F'\"\n    ></app-category-button>\n    <app-category-button\n      [buttonText]=\"'Dessert'\"\n      [buttonBackground]=\"'#E7ECF2'\"\n      [buttonFontSize]=\"'12px'\"\n      [buttonTextColor]=\"'#2D333F'\"\n    ></app-category-button>\n    <app-category-button\n      [buttonText]=\"'Drink'\"\n      [buttonBackground]=\"'#E7ECF2'\"\n      [buttonFontSize]=\"'12px'\"\n      [buttonTextColor]=\"'#2D333F'\"\n    ></app-category-button>\n  </div>\n</div>\n"
         },
         {
             "name": "ApplyButtonComponent",
-            "id": "component-ApplyButtonComponent-a78c0cba5251626dc352caf432c8379f0864691ae1e351473f6cb6a666b066b509fa3b7f97c3dd8f44218e14e56f732e4f062afe8e72dfe595b3c8c198327842",
+            "id": "component-ApplyButtonComponent-590ac4c4b66b4fde08d3ac4fc5d1272d6fd9bacf43ebe108eb841151ab6989d476d48e0505f1b698b9abb0188bdfba3eb3e1c8ab7a4382a53b37952170499e6c",
             "file": "src/app/apply-button/apply-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -118,15 +118,6 @@
             "hostDirectives": [],
             "inputsClass": [
                 {
-                    "name": "buttonColor",
-                    "defaultValue": "'white'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
                     "name": "buttonFontSize",
                     "defaultValue": "'16px'",
                     "deprecated": false,
@@ -141,6 +132,15 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 9,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "buttonTextColor",
+                    "defaultValue": "'white'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
                     "type": "string",
                     "decorators": []
                 }
@@ -177,7 +177,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-apply-button',\n  templateUrl: './apply-button.component.html',\n  styleUrls: ['./apply-button.component.scss'],\n})\nexport class ApplyButtonComponent {\n  @Input() buttonText: string = 'Apply';\n  @Input() buttonColor: string = 'white';\n  @Input() buttonFontSize: string = '16px';\n\n  @Output() applyClick = new EventEmitter<void>();\n\n  onApplyClick() {\n    this.applyClick.emit();\n  }\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-apply-button',\n  templateUrl: './apply-button.component.html',\n  styleUrls: ['./apply-button.component.scss'],\n})\nexport class ApplyButtonComponent {\n  @Input() buttonText: string = 'Apply';\n  @Input() buttonTextColor: string = 'white';\n  @Input() buttonFontSize: string = '16px';\n\n  @Output() applyClick = new EventEmitter<void>();\n\n  onApplyClick() {\n    this.applyClick.emit();\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -187,7 +187,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<button\n  [style.color]=\"buttonColor\"\n  [style.fontSize]=\"buttonFontSize\"\n  (click)=\"onApplyClick()\"\n>\n  {{ buttonText }}\n</button>\n"
+            "templateData": "<button\n  [style.color]=\"buttonTextColor\"\n  [style.fontSize]=\"buttonFontSize\"\n  (click)=\"onApplyClick()\"\n>\n  {{ buttonText }}\n</button>\n"
         },
         {
             "name": "ButtonComponent",
@@ -682,25 +682,135 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "table {\r\n  width: 100%;\r\n\r\n  border-collapse: collapse;\r\n  margin-bottom: 2rem;\r\n}\r\n\r\n.main-div {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: start;\r\n  align-items: center;\r\n  width: 380px;\r\n  height: 100vh;\r\n  padding: 1rem;\r\n  background-color: #f2f2f2;\r\n}\r\n\r\nth {\r\n  background-color: black;\r\n  color: white;\r\n  padding: 10px;\r\n  text-align: left;\r\n}\r\n\r\ntbody tr:nth-child(odd) {\r\n  background-color: #f2f2f2;\r\n}\r\n\r\ntbody tr:nth-child(even) {\r\n  background-color: white;\r\n}\r\n\r\ntd {\r\n  padding: 8px;\r\n  border: 1px solid #ddd;\r\n}\r\n\r\n.total-price {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #2d333f;\r\n  color: #35bcaa;\r\n  width: 347px;\r\n  padding: 1rem;\r\n  border-radius: 0px, 0px, 4px, 4px;\r\n  font-size: 25px;\r\n  font-weight: bold;\r\n}\r\n\r\n.footer-div {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 100%;\r\n}\r\n\r\n.cancel-button {\r\n  background-color: white;\r\n  color: red;\r\n  padding: 10px;\r\n  border: solid 2px red;\r\n  cursor: pointer;\r\n  border-radius: 5%;\r\n  width: 7rem;\r\n  margin: 10px;\r\n}\r\n",
+                    "data": "table {\r\n  width: 100%;\r\n\r\n  border-collapse: collapse;\r\n  margin-bottom: 2rem;\r\n}\r\n\r\n.main-div {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: flex-start;\r\n  align-items: center;\r\n  width: 380px;\r\n  height: 100vh;\r\n  padding: 1rem;\r\n  background-color: #f2f2f2;\r\n}\r\n\r\nth {\r\n  background-color: black;\r\n  color: white;\r\n  padding: 10px;\r\n  text-align: left;\r\n}\r\n\r\ntbody tr:nth-child(odd) {\r\n  background-color: #f2f2f2;\r\n}\r\n\r\ntbody tr:nth-child(even) {\r\n  background-color: white;\r\n}\r\n\r\ntd {\r\n  padding: 8px;\r\n  border: 1px solid #ddd;\r\n}\r\n\r\n.total-price {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  background-color: #2d333f;\r\n  color: #35bcaa;\r\n  width: 347px;\r\n  padding: 1rem;\r\n  border-radius: 0px, 0px, 4px, 4px;\r\n  font-size: 25px;\r\n  font-weight: bold;\r\n}\r\n\r\n.footer-div {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 100%;\r\n}\r\n\r\n.cancel-button {\r\n  background-color: white;\r\n  color: red;\r\n  padding: 10px;\r\n  border: solid 2px red;\r\n  cursor: pointer;\r\n  border-radius: 5%;\r\n  width: 7rem;\r\n  margin: 10px;\r\n}\r\n",
                     "styleUrl": "./product-table.component.scss"
                 }
             ],
             "stylesData": "",
             "extends": [],
             "templateData": "<div class=\"main-div\">\r\n  <table>\r\n    <thead>\r\n      <tr>\r\n        <th>PLU</th>\r\n        <th>Name</th>\r\n        <th>Amount</th>\r\n        <th>Price</th>\r\n        <th>Total</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <tr>\r\n        <td>{{ plu }}</td>\r\n        <td>{{ productName }}</td>\r\n        <td>{{ amount }}</td>\r\n        <td>{{ price }}</td>\r\n        <td>{{ total }}</td>\r\n      </tr>\r\n      <tr *ngFor=\"let topping of toppings\">\r\n        <td>{{ topping.plu }}</td>\r\n        <td>{{ topping.name }}</td>\r\n        <td>{{ topping.amount }}</td>\r\n        <td>{{ topping.price }}</td>\r\n        <td>{{ topping.total }}</td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n\r\n  <div>\r\n    <div class=\"footer-div\" *ngIf=\"toppings && toppings.length > 0\">\r\n      <p class=\"total-price\">{{ calculateTotalPrice() }} £</p>\r\n      <button\r\n        class=\"cancel-button\"\r\n        [style.color]=\"cancelButtonProperties.color\"\r\n        [style.fontSize]=\"cancelButtonProperties.fontSize\"\r\n      >\r\n        {{ cancelButtonProperties.text }}\r\n      </button>\r\n    </div>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "ToggleMenuButtonComponent",
+            "id": "component-ToggleMenuButtonComponent-f7f1a07c6dbc1df5d8a2bd0284924ef9b720082678018b817316400d06469679752d75297fa1160fca1b64aa25ae68010e41a06ece331bb324c45a7dba7d2948",
+            "file": "src/app/toggle-menu-button/toggle-menu-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-toggle-menu-button",
+            "styleUrls": [
+                "./toggle-menu-button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./toggle-menu-button.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "buttonFontSize",
+                    "defaultValue": "'16px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "homeButtonColor",
+                    "defaultValue": "'blue'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "menuButtonColor",
+                    "defaultValue": "'green'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "homeButtonClick",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "menuToggleButtonClick",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "onHomeButtonClick",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onMenuToggleButtonClick",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'app-toggle-menu-button',\n  templateUrl: './toggle-menu-button.component.html',\n  styleUrls: ['./toggle-menu-button.component.scss'],\n})\nexport class ToggleMenuButtonComponent {\n  @Input() homeButtonColor: string = 'blue';\n  @Input() menuButtonColor: string = 'green';\n  @Input() buttonFontSize: string = '16px';\n\n  @Output() homeButtonClick = new EventEmitter<void>();\n  @Output() menuToggleButtonClick = new EventEmitter<void>();\n\n  onHomeButtonClick() {\n    this.homeButtonClick.emit();\n  }\n\n  onMenuToggleButtonClick() {\n    this.menuToggleButtonClick.emit();\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".button-container {\r\n  display: flex;\r\n}\r\n\r\nbutton {\r\n  padding: 10px;\r\n  cursor: pointer;\r\n  border: none;\r\n  border-radius: 5px;\r\n  margin-right: 10px;\r\n}\r\n\r\n.fa {\r\n  margin-right: 5px;\r\n}\r\n",
+                    "styleUrl": "./toggle-menu-button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"button-container\">\n  <button\n    class=\"home-button\"\n    [style.color]=\"homeButtonColor\"\n    [style.fontSize]=\"buttonFontSize\"\n    (click)=\"onHomeButtonClick()\"\n  >\n    <i class=\"fa fa-home\"></i>\n  </button>\n\n  <button\n    class=\"menu-toggle-button\"\n    [style.color]=\"menuButtonColor\"\n    [style.fontSize]=\"buttonFontSize\"\n    (click)=\"onMenuToggleButtonClick()\"\n  >\n    <i class=\"fa fa-bars\"></i> Menu\n  </button>\n</div>\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-4236c459adf3c00f6a200aba197f3254efc0cc130abfb6bb6c57ab7c7989848c53b32e38b2635f00ac4b9eef34365943c2beb151330c7ab189e1566c69169479",
+            "id": "module-AppModule-6755d2d5908b361994f312ebecbbcf588085378229e7fc797faf116a7bcea4105f38f96fa66a2a658f8d48cc4b68941d0539bc47da67a3d5ccecc2b406c4b734",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport { ProductTableComponent } from './product-table/product-table.component';\nimport { ButtonComponent } from './button/button.component';\nimport { ApplyButtonComponent } from './apply-button/apply-button.component';\nimport { CategoryButtonComponent } from './category-button/category-button.component';\n\n@NgModule({\n  declarations: [AppComponent, ProductTableComponent, ButtonComponent, ApplyButtonComponent, CategoryButtonComponent],\n  imports: [BrowserModule, AppRoutingModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\n\nimport { ProductTableComponent } from './product-table/product-table.component';\nimport { ButtonComponent } from './button/button.component';\nimport { ApplyButtonComponent } from './apply-button/apply-button.component';\nimport { CategoryButtonComponent } from './category-button/category-button.component';\nimport { ToggleMenuButtonComponent } from './toggle-menu-button/toggle-menu-button.component';\n\n@NgModule({\n  declarations: [AppComponent, ProductTableComponent, ButtonComponent, ApplyButtonComponent, CategoryButtonComponent, ToggleMenuButtonComponent],\n  imports: [BrowserModule, AppRoutingModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
             "children": [
                 {
                     "type": "providers",
@@ -723,6 +833,9 @@
                         },
                         {
                             "name": "ProductTableComponent"
+                        },
+                        {
+                            "name": "ToggleMenuButtonComponent"
                         }
                     ]
                 },
@@ -822,6 +935,16 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/toggle-menu-button/toggle-menu-button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -905,6 +1028,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/button/button.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryFn<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  component: ButtonComponent,\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/product-table/product-table.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -925,11 +1058,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/button/button.component.stories.ts",
+                "file": "src/app/toggle-menu-button/toggle-menu-button.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "StoryFn<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\r\n  component: ButtonComponent,\r\n  props: args,\r\n})"
+                "type": "StoryFn<ToggleMenuButtonComponent>",
+                "defaultValue": "(\r\n  args: ToggleMenuButtonComponent\r\n) => ({\r\n  component: ToggleMenuButtonComponent,\r\n  props: args,\r\n})"
             },
             {
                 "name": "WithContent",
@@ -1053,6 +1186,28 @@
                     "deprecationMessage": "",
                     "type": "StoryFn<CategoryButtonComponent>",
                     "defaultValue": "(\r\n  args: CategoryButtonComponent\r\n) => ({\r\n  component: CategoryButtonComponent,\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/toggle-menu-button/toggle-menu-button.component.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/toggle-menu-button/toggle-menu-button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/toggle-menu-button/toggle-menu-button.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryFn<ToggleMenuButtonComponent>",
+                    "defaultValue": "(\r\n  args: ToggleMenuButtonComponent\r\n) => ({\r\n  component: ToggleMenuButtonComponent,\r\n  props: args,\r\n})"
                 }
             ],
             "src/stories/header.stories.ts": [
@@ -1376,6 +1531,35 @@
                 "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/toggle-menu-button/toggle-menu-button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/toggle-menu-button/toggle-menu-button.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/toggle-menu-button/toggle-menu-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ToggleMenuButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {

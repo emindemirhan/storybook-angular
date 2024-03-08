@@ -1,0 +1,25 @@
+.button-container {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.home-button {
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.menu-toggle-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-width: 88px;
+  min-height: 40px;
+  background-color: #2d333f;
+}

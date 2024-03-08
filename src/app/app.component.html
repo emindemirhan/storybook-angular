@@ -1,12 +1,19 @@
 <div class="main-layout">
-  <div><app-product-table [toppings]="this.toppings"></app-product-table></div>
+  <div>
+    <app-product-table
+      [cancelButtonProperties]="{  text: 'Cancel',
+      color: 'red',
+      fontSize: '16px',}"
+      [toppings]="this.toppings"
+    ></app-product-table>
+  </div>
   <div class="middle-div">
     <div class="button-layout">
       <app-button></app-button><app-button></app-button><app-button></app-button
       ><app-button></app-button><app-button></app-button
       ><app-button></app-button>
     </div>
-    <div>
+    <div class="bottom-buttons">
       <app-apply-button
         [buttonTextColor]="'white'"
         [buttonFontSize]="'14px'"
@@ -15,34 +22,45 @@
     </div>
   </div>
   <div class="category-button-layout">
-    <app-category-button
-      [buttonText]="'Product Category'"
-      [buttonBackground]="'#2D333F'"
-      [buttonFontSize]="'14px'"
-    ></app-category-button>
-    <app-category-button
-      [buttonText]="'Daily'"
-      [buttonBackground]="'#E7ECF2'"
-      [buttonFontSize]="'14px'"
-      [buttonTextColor]="'#2D333F'"
-    ></app-category-button>
-    <app-category-button
-      [buttonText]="'Alacarte'"
-      [buttonBackground]="'#E7ECF2'"
-      [buttonFontSize]="'12px'"
-      [buttonTextColor]="'#2D333F'"
-    ></app-category-button>
-    <app-category-button
-      [buttonText]="'Dessert'"
-      [buttonBackground]="'#E7ECF2'"
-      [buttonFontSize]="'12px'"
-      [buttonTextColor]="'#2D333F'"
-    ></app-category-button>
-    <app-category-button
-      [buttonText]="'Drink'"
-      [buttonBackground]="'#E7ECF2'"
-      [buttonFontSize]="'12px'"
-      [buttonTextColor]="'#2D333F'"
-    ></app-category-button>
+    <div class="category-button-div">
+      <app-category-button
+        [buttonText]="'Product Category'"
+        [buttonBackground]="'#2D333F'"
+        [buttonFontSize]="'14px'"
+      ></app-category-button>
+      <app-category-button
+        [buttonText]="'Daily'"
+        [buttonBackground]="'#E7ECF2'"
+        [buttonFontSize]="'14px'"
+        [buttonTextColor]="'#2D333F'"
+      ></app-category-button>
+      <app-category-button
+        [buttonText]="'Alacarte'"
+        [buttonBackground]="'#E7ECF2'"
+        [buttonFontSize]="'12px'"
+        [buttonTextColor]="'#2D333F'"
+      ></app-category-button>
+      <app-category-button
+        [buttonText]="'Dessert'"
+        [buttonBackground]="'#E7ECF2'"
+        [buttonFontSize]="'12px'"
+        [buttonTextColor]="'#2D333F'"
+      ></app-category-button>
+      <app-category-button
+        [buttonText]="'Drink'"
+        [buttonBackground]="'#E7ECF2'"
+        [buttonFontSize]="'12px'"
+        [buttonTextColor]="'#2D333F'"
+      ></app-category-button>
+    </div>
+
+    <div class="menu-toggler-buttons">
+      <app-toggle-menu-button
+        [homeButtonColor]="'white'"
+        [buttonFontSize]="'14px'"
+        [menuButtonColor]="'white'"
+        [buttonBackGroundColor]="'#2D333F'"
+      ></app-toggle-menu-button>
+    </div>
   </div>
 </div>
