@@ -8,7 +8,7 @@ table {
 .main-div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 380px;
   height: 100vh;
@@ -42,8 +42,8 @@ td {
   align-items: center;
   background-color: #2d333f;
   color: #35bcaa;
-  width: 347px;
-  padding: 1rem;
+  min-width: 367px;
+  min-height: 44px;
   border-radius: 0px, 0px, 4px, 4px;
   font-size: 25px;
   font-weight: bold;
