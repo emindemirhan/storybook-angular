@@ -1,17 +1,19 @@
 table {
-  width: 30rem;
+  width: 100%;
+
   border-collapse: collapse;
+  margin-bottom: 2rem;
 }
 
 .main-div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  width: 30rem;
-  background-color: rgba(166, 157, 174, 0.626);
-  border-radius: 5%;
-  gap: 1px;
+  width: 380px;
+  height: 100vh;
+  padding: 1rem;
+  background-color: #f2f2f2;
 }
 
 th {
@@ -38,11 +40,11 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.663);
-  color: green;
-  width: 25rem;
+  background-color: #2d333f;
+  color: #35bcaa;
+  width: 347px;
   padding: 1rem;
-  border-radius: 3%;
+  border-radius: 0px, 0px, 4px, 4px;
   font-size: 25px;
   font-weight: bold;
 }
@@ -52,6 +54,7 @@ td {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .cancel-button {
@@ -61,7 +64,6 @@ td {
   border: solid 2px red;
   cursor: pointer;
   border-radius: 5%;
-
   width: 7rem;
   margin: 10px;
 }

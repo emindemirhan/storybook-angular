@@ -1,0 +1,21 @@
+.main-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+
+  background-color: white;
+}
+
+.button-layout {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: top;
+  width: 35rem;
+  padding: 1rem;
+
+  gap: 1rem;
+}
