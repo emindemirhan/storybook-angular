@@ -1,8 +1,48 @@
 <div class="main-layout">
   <div><app-product-table [toppings]="this.toppings"></app-product-table></div>
-  <div class="button-layout">
-    <app-button></app-button><app-button></app-button><app-button></app-button
-    ><app-button></app-button><app-button></app-button><app-button></app-button>
+  <div class="middle-div">
+    <div class="button-layout">
+      <app-button></app-button><app-button></app-button><app-button></app-button
+      ><app-button></app-button><app-button></app-button
+      ><app-button></app-button>
+    </div>
+    <div>
+      <app-apply-button
+        [buttonTextColor]="'white'"
+        [buttonFontSize]="'14px'"
+        [buttonText]="'Apply'"
+      ></app-apply-button>
+    </div>
   </div>
-  <div></div>
+  <div class="category-button-layout">
+    <app-category-button
+      [buttonText]="'Product Category'"
+      [buttonBackground]="'#2D333F'"
+      [buttonFontSize]="'14px'"
+    ></app-category-button>
+    <app-category-button
+      [buttonText]="'Daily'"
+      [buttonBackground]="'#E7ECF2'"
+      [buttonFontSize]="'14px'"
+      [buttonTextColor]="'#2D333F'"
+    ></app-category-button>
+    <app-category-button
+      [buttonText]="'Alacarte'"
+      [buttonBackground]="'#E7ECF2'"
+      [buttonFontSize]="'12px'"
+      [buttonTextColor]="'#2D333F'"
+    ></app-category-button>
+    <app-category-button
+      [buttonText]="'Dessert'"
+      [buttonBackground]="'#E7ECF2'"
+      [buttonFontSize]="'12px'"
+      [buttonTextColor]="'#2D333F'"
+    ></app-category-button>
+    <app-category-button
+      [buttonText]="'Drink'"
+      [buttonBackground]="'#E7ECF2'"
+      [buttonFontSize]="'12px'"
+      [buttonTextColor]="'#2D333F'"
+    ></app-category-button>
+  </div>
 </div>

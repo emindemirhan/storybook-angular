@@ -5,7 +5,7 @@ button {
   background-color: #277ed4;
   padding: 10px, 20px, 10px, 20px;
   font-size: 14px;
-  width: 79px;
-  height: 37px;
+  min-width: 79px;
+  min-height: 37px;
   color: white;
 }

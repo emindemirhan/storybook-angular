@@ -21,6 +21,6 @@ const Template: StoryFn<ApplyButtonComponent> = (
 export const Default = Template.bind({});
 Default.args = {
   buttonText: 'Apply',
-  buttonColor: 'white',
+  buttonTextColor: 'white',
   buttonFontSize: '14px',
 };

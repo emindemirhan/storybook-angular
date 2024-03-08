@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ApplyButtonComponent {
   @Input() buttonText: string = 'Apply';
-  @Input() buttonColor: string = 'white';
+  @Input() buttonTextColor: string = 'white';
   @Input() buttonFontSize: string = '16px';
 
   @Output() applyClick = new EventEmitter<void>();

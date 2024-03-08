@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { ProductTableComponent } from './product-table/product-table.component';
 import { ButtonComponent } from './button/button.component';
 import { ApplyButtonComponent } from './apply-button/apply-button.component';
+import { CategoryButtonComponent } from './category-button/category-button.component';
 
 @NgModule({
-  declarations: [AppComponent, ProductTableComponent, ButtonComponent, ApplyButtonComponent],
+  declarations: [AppComponent, ProductTableComponent, ButtonComponent, ApplyButtonComponent, CategoryButtonComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
